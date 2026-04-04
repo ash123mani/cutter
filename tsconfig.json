@@ -9,7 +9,7 @@
     "skipLibCheck": true,
     "rootDir": "./src",
     "ignoreDeprecations": "6.0",
-    "baseUrl": ".",
+    "baseUrl": "./src",
     "paths": {
       "@/*": ["src/*"]
     }

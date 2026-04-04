@@ -1,0 +1,99 @@
+:root {
+    /* ── Color Palette ── */
+
+    /* Backgrounds — warm parchment scale */
+    --color-bg:           #faf8f5;
+    --color-bg-subtle:    #f3efe8;
+    --color-bg-hover:     #ede7dc;
+    --color-bg-elevated:  #ffffff;
+
+    /* Ink — deep warm navy, not cold black */
+    --color-ink:          #1c1917;
+    --color-ink-muted:    #57534e;
+    --color-ink-faint:    #a8a29e;
+
+    /* Borders — warm stone */
+    --color-border:       #e7e0d5;
+    --color-border-strong:#292524;
+
+    /* Accent — deep amber / burnt sienna */
+    --color-accent:       #b45309;
+    --color-accent-hover: #92400e;
+    --color-accent-light: #fef3c7;
+    --color-accent-inv:   #ffffff;
+
+    /* Selection — rich amber highlight */
+    --color-selection-bg: #fbbf24;
+    --color-selection-fg: #1c1917;
+
+    /* Annotation — soft yellow-cream */
+    --color-annotation:        #fffbeb;
+    --color-annotation-border: #f59e0b;
+
+    /* Semantic — success */
+    --color-success:      #166534;
+    --color-success-bg:   #f0fdf4;
+    --color-success-border: #bbf7d0;
+
+    /* Semantic — error */
+    --color-error:        #9a3412;
+    --color-error-bg:     #fff7ed;
+    --color-error-border: #fed7aa;
+
+    /* Code blocks — cool contrast against warm page */
+    --color-code-bg:      #f8f7f4;
+    --color-code-border:  #ddd6ca;
+    --color-code-header:  #ede8e0;
+
+    /* ── Spacing Scale (4px base) ── */
+    --space-1:  4px;
+    --space-2:  8px;
+    --space-3:  12px;
+    --space-4:  16px;
+    --space-5:  20px;
+    --space-6:  24px;
+    --space-8:  32px;
+    --space-10: 40px;
+    --space-12: 48px;
+    --space-16: 64px;
+
+    /* ── Typography ── */
+    --font-display: 'Playfair Display', Georgia, serif;
+    --font-body:    'Source Serif 4', Georgia, serif;
+    --font-mono:    'JetBrains Mono', monospace;
+    --font-ui:      'DM Sans', system-ui, sans-serif;
+
+    --text-xs:   11px;
+    --text-sm:   13px;
+    --text-base: 18px;
+    --text-lg:   22px;
+    --text-xl:   26px;
+    --text-2xl:  32px;
+    --text-3xl:  40px;
+    --text-4xl:  52px;
+
+    --leading-tight:  1.2;
+    --leading-snug:   1.45;
+    --leading-normal: 1.65;
+    --leading-loose:  1.9;
+
+    /* ── Layout ── */
+    --content-width: 740px;
+    --page-padding:  var(--space-6);
+
+    /* ── Borders ── */
+    --radius-sm:   3px;
+    --radius-md:   6px;
+    --radius-lg:   10px;
+    --radius-pill: 999px;
+
+    /* ── Shadows — warm tinted ── */
+    --shadow-sm: 0 1px 2px rgba(28, 25, 23, 0.06);
+    --shadow-md: 0 2px 8px rgba(28, 25, 23, 0.09);
+    --shadow-lg: 0 4px 24px rgba(28, 25, 23, 0.11);
+
+    /* ── Transitions ── */
+    --transition-fast: 100ms ease;
+    --transition-base: 180ms ease;
+    --transition-slow: 300ms ease;
+}

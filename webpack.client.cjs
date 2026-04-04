@@ -48,6 +48,10 @@ module.exports = {
 				},
 				exclude: /node_modules/,
 			},
+			{
+				test: /\.css$/,           // 👈 add this rule
+				use: ['style-loader', 'css-loader'],  // order matters — right to left
+			},
 		],
 	},
 };

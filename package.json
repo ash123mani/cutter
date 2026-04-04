@@ -1,0 +1,43 @@
+{
+  "name": "rsc-app",
+  "version": "1.0.0",
+  "description": "",
+  "type": "module",
+  "main": "index.js",
+  "scripts": {
+    "build:client": "webpack --config webpack.client.cjs",
+    "dev:client": "webpack serve --config webpack.client.cjs",
+    "dev:server": "nodemon --exec \"node --conditions react-server --import ./src/server/register.mjs src/server/index.ts\" --watch src --ext ts,tsx,mjs",
+    "dev": "npm run build:client && concurrently \"npm run dev:client\" \"npm run dev:server\""
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^5.2.1",
+    "react": "^19.2.4",
+    "react-dom": "^19.2.4",
+    "react-server-dom-webpack": "^19.2.4"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.29.0",
+    "@babel/preset-env": "^7.29.2",
+    "@babel/preset-react": "^7.28.5",
+    "@babel/preset-typescript": "^7.28.5",
+    "@types/express": "^5.0.6",
+    "@types/node": "^25.5.2",
+    "@types/react": "^19.2.14",
+    "@types/react-dom": "^19.2.3",
+    "babel-loader": "^10.1.1",
+    "concurrently": "^9.2.1",
+    "nodemon": "^3.1.14",
+    "ts-loader": "^9.5.7",
+    "ts-node": "^10.9.2",
+    "tsx": "^4.21.0",
+    "typescript": "^6.0.2",
+    "webpack": "^5.105.4",
+    "webpack-cli": "^7.0.2",
+    "webpack-dev-server": "^5.2.3",
+    "webpack-node-externals": "^3.0.0"
+  }
+}

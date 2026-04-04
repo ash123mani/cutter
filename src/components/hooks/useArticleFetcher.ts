@@ -9,7 +9,6 @@ interface FetcherState {
 
 interface FetcherActions {
     fetch:      (url: string) => Promise<void>;
-    setArticle: (a: Article) => void;
 }
 
 export function useArticleFetcher(): FetcherState & FetcherActions {
@@ -33,5 +32,5 @@ export function useArticleFetcher(): FetcherState & FetcherActions {
         }
     }, []);
 
-    return { article, loading, error, fetch, setArticle };
+    return { article, loading, error, fetch };
 }

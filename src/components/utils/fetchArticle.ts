@@ -10,7 +10,7 @@ export interface Article {
 }
 
 export async function fetchAndParseArticle(url: string): Promise<Article> {
-    const res = await fetch(`${env.apis['cross-origin'].baseUrl}=${encodeURIComponent(url)}`);
+    const res = await fetch(`${env.apis['cross-origin'].baseUrl}/?url=${encodeURIComponent(url)}`);
     if (!res.ok) throw new Error(`Failed to fetch page (${res.status})`);
 
     const html   = await res.text();

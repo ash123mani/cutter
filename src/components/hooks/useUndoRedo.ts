@@ -37,11 +37,11 @@ export function useUndoRedo({ contentRef, titleRef }: UndoRedoOptions): UndoRedo
                 e.preventDefault();
 
                 // Pop from manual delete stack first
-                if (stackRef.current.length > 0) {
-                    const last = stackRef.current.pop()!;
-                    last.parent.insertBefore(last.node, last.nextSibling);
-                    return;
-                }
+                // if (stackRef.current.length > 0) {
+                //     const last = stackRef.current.pop()!;
+                //     last.parent.insertBefore(last.node, last.nextSibling);
+                //     return;
+                // }
 
                 // Fall back to native undo for text edits
                 if (inEditor) document.execCommand('undo');

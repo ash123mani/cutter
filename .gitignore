@@ -1,4 +1,10 @@
 .idea
+.env
 node_modules
 dist
 public
+
+**/.env
+.env
+.env*
+.env.*

@@ -8,6 +8,7 @@ import {useUndoRedo} from './hooks/useUndoRedo';
 import {useCodeSections} from './hooks/useCodeSections';
 import * as styles from './ArticleEditor.module.css';
 import {useFocusTitleOnLoad} from "./hooks/useFocusTitleOnLoad";
+import UserMenu from "./UserMenu.client";
 
 export default function ArticleEditor() {
     const [url, setUrl] = useState('');
@@ -45,10 +46,14 @@ export default function ArticleEditor() {
             <header className={styles.header}>
                 <div className="container">
                     <div className={styles.headerInner}>
-            <span className={styles.logo}>
-              Read<span className={styles.logoAccent}>wise</span>
-            </span>
-                        <span className={styles.tagline}>Article Editor</span>
+      <span className={styles.logo}>
+        Read<span className={styles.logoAccent}>wise</span>
+      </span>
+
+                        <div className={styles.headerRight}>
+                            <span className={styles.tagline}>Article Editor</span>
+                            <UserMenu />
+                        </div>
                     </div>
                 </div>
             </header>

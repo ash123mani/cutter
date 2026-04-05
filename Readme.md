@@ -150,3 +150,30 @@ Open **`http://localhost:3001`** in your browser.
 "dev:server":   "nodemon --exec \"node --conditions react-server --import ./src/server/register.mjs src/server/index.ts\" --watch src --ext ts,tsx,mjs",
 "dev":          "npm run build:client && concurrently \"npm run dev:client\" \"npm run dev:server\""
 ```
+
+
+### Auth
+
+User clicks "Sign in with GitHub"
+↓
+Browser → GET http://localhost:3000/auth/github
+↓
+Passport redirects to github.com/login/oauth/authorize
+↓
+User approves on GitHub
+↓
+GitHub → GET http://localhost:3000/auth/github/callback
+↓
+Passport exchanges code → fetches GitHub profile
+↓
+Saves/finds user in MongoDB users collection
+↓
+Stores session in MongoDB sessions collection
+↓
+Sets session cookie in browser
+↓
+Redirects to http://localhost:3001
+↓
+UserMenu fetches /auth/session → gets user back
+↓
+Shows avatar + name

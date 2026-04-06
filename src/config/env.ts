@@ -1,7 +1,7 @@
 export const env = {
-    apis: {
-        'cross-origin': {
-            baseUrl: 'https://corsproxy.io',
-        }
-    }
-}
+  apis: {
+    'cross-origin': {
+      baseUrl: 'https://corsproxy.io',
+    },
+  },
+};

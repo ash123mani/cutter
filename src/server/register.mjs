@@ -6,6 +6,6 @@ register('ts-node/esm', pathToFileURL('./'));
 
 // Register our custom client reference loader
 register(
-	pathToFileURL('./src/server/client-reference-loader.mjs').href,
-	pathToFileURL('./')
+  pathToFileURL('./src/server/client-reference-loader.mjs').href,
+  pathToFileURL('./'),
 );

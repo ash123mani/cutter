@@ -4,6 +4,7 @@ import { useRef, useCallback } from 'react';
 import Toolbar from './Toolbar.client';
 import { useUndoRedo, useCodeSections, useFocusTitleOnLoad } from '../hooks';
 import * as styles from './ArticleEditor.module.css';
+import { exportToPDF } from '../utils/pdfExport';
 
 interface Props {
   article: any; // Replace with your Article type
@@ -36,9 +37,14 @@ export default function EditorShell({ article }: Props) {
     // Add your mutation logic here
   }, [article]);
 
+  const handleDownloadPDF = useCallback(async () => {
+    if (!contentRef.current || !titleRef.current) return;
+    await exportToPDF(titleRef.current.innerText, contentRef.current.innerHTML);
+  }, []);
+
   return (
     <div className={styles.articleWrapper}>
-      <Toolbar onSave={handleSave} />
+      <Toolbar onSave={handleSave} onDownloadPDF={handleDownloadPDF} />
 
       <article className={styles.editorCard}>
         <header className={styles.meta}>

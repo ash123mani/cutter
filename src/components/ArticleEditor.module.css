@@ -12,37 +12,6 @@
     margin-block: var(--space-8);
 }
 
-/* ── Header ── */
-.header {
-    border-bottom: 2px solid var(--color-ink);
-    padding-block: var(--space-5);
-}
-
-.headerInner {
-    display: flex;
-    align-items: baseline;
-    justify-content: space-between;
-}
-
-.headerRight {
-    display: flex;
-    align-items: center;
-    gap: var(--space-6);
-}
-
-.logo {
-    font-family: var(--font-display);
-    font-size: var(--text-xl);
-    font-weight: 700;
-    color: var(--color-ink);
-    letter-spacing: -0.03em;
-}
-
-.logoAccent {
-    font-style: italic;
-    opacity: 0.5;
-}
-
 .tagline {
     font-family: var(--font-ui);
     font-size: var(--text-xs);

@@ -68,11 +68,6 @@ app.get('/auth/github/callback',
 
 // 3. Get current session
 app.get('/auth/session', (req, res) => {
-  console.log('session id:', req.sessionID);
-  console.log('session data:', req.session);
-  console.log('req.user:', req.user);
-  console.log('passport:', (req.session as any).passport);
-
   if (req.user) {
     res.json({ user: req.user });
   } else {
